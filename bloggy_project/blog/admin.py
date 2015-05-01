@@ -8,7 +8,7 @@ class PostAdmin(admin.ModelAdmin):
 	Customize admin site by listing Post models
 	title and created_at
 	"""
-	list_display = ('title', 'created_at')
+	list_display = ('title', 'created_at', 'views')
 
 
 #Register classes to the Django admin interface
