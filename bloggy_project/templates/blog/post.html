@@ -1,13 +1,12 @@
-<html> 
-<head>
-	<title>Bloggy: {{ single_post.title }}</title> 
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
 <h2>{{ single_post.title }}</h2> 
 <ul>
 	<p><em>{{ single_post.created_at }}</em></p> 
 	<p>{{ single_post.content }}</p>
 	<p>Tag: {{ single_post.tag }}</tag>
+	<p>Views: {{ single_post.views }}</p>
 	<br>
 	<p>
 		{% if single_post.image %}
@@ -15,7 +14,6 @@
 		{% endif %}
 	</p>
 </ul>
-<p>Views: {{ single_post.views }}</p>
 <p>Had enough? Return <a href="/blog">home</a>.</p><br/> 
-</body>
-</html>
+{% endblock content %}
+
