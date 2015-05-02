@@ -41,7 +41,11 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #Localapps
+
+    #Third Party Apps
+    'django_forms_bootstrap',
+
+    #Local Apps
     'blog',
 )
 
