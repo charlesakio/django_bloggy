@@ -17,6 +17,8 @@ def index(request):
 def post(request, post_url):
 	single_post = get_object_or_404(Post, 
 									title=post_url.replace('_', ' '))
+	single_post.views += 1	#increment the number of views
+	single_post.save()
 	template = loader.get_template('blog/post.html')
 	context = Context({'single_post': single_post, })
 	return HttpResponse(template.render(context))
