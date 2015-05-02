@@ -45,4 +45,6 @@ def add_post(request):
 			print(form.errors)#No? Display errors
 	else:
 		form = PostForm()
-	return render_to_response('blog/add_post.html', context)
+	return render_to_response('blog/add_post.html', 
+							{'form': form},
+							context)
